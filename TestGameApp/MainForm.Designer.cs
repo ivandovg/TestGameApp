@@ -28,13 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.edText = new System.Windows.Forms.RichTextBox();
+            this.btnOpen = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // edText
+            // 
+            this.edText.Location = new System.Drawing.Point(12, 12);
+            this.edText.Name = "edText";
+            this.edText.Size = new System.Drawing.Size(776, 381);
+            this.edText.TabIndex = 0;
+            this.edText.Text = "";
+            // 
+            // btnOpen
+            // 
+            this.btnOpen.Location = new System.Drawing.Point(12, 415);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(75, 23);
+            this.btnOpen.TabIndex = 1;
+            this.btnOpen.Text = "Open";
+            this.btnOpen.UseVisualStyleBackColor = true;
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(93, 415);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 2;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnOpen);
+            this.Controls.Add(this.edText);
+            this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "TestEditor";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.RichTextBox edText;
+        private System.Windows.Forms.Button btnOpen;
+        private System.Windows.Forms.Button btnSave;
     }
 }
 

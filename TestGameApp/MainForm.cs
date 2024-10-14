@@ -16,5 +16,10 @@ namespace TestGameApp
         {
             InitializeComponent();
         }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            // open file
+        }
     }
 }
