@@ -19,7 +19,20 @@ namespace TestGameApp
 
         private void btnOpen_Click(object sender, EventArgs e)
         {
-            // open file
+            var dlg=new OpenFileDialog();
+            if (dlg.ShowDialog() != DialogResult.OK)
+            {
+                return;
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            var dlg = new SaveFileDialog();
+            if (dlg.ShowDialog() != DialogResult.OK)
+            {
+                return;
+            }
         }
     }
 }
